@@ -1,26 +1,35 @@
 import { useState } from "react";
 
-export default function Player({name, symbol}){
+export default function Player({initialName, symbol}){
+    const [playerName, setPlayerName]= useState(initialName);
 // This statement is used to store the names that we will edit on each reload
  const [isEditing, setIsEditing] = useState(false);
 
  function handleEditClick(){
-    setIsEditing(true);
+    setIsEditing(!isEditing);  //true to false and vice versa
 }
 
-let playerName = <span className="player-name">{name}</span> 
+function handleChange(event){
+    console.log(event);
+    setPlayerName(event.target.value);
+}
+
+let EditablePlayerName = <span className="player-name">{playerName}</span>
+// let btnCaption = 'Edit'; we can use this method orelse ternary operator method both results the same 
 
     if(isEditing){
-        playerName = <input type="text" required />
+        // The value shows the name of the player on screen
+        EditablePlayerName = <input type="text" required value={playerName} onChange={handleChange}/>
+        // btnCaption="Save";
     }
 
     return(
         <li>
             <span className="player">
-              {playerName}
+              {EditablePlayerName}
               <span className="player-symbol">{symbol}</span>
             </span>
-            <button onClick={handleEditClick}>Edit</button>
+            <button onClick={handleEditClick}>{isEditing ? 'Save' : 'Edit'}</button>
         </li>
     );
 }
