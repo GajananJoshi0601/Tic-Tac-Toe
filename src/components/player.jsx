@@ -24,5 +24,3 @@ let playerName = <span className="player-name">{name}</span>
         </li>
     );
 }
-
-// Tommarrow we have to do this page repeat on here means u will get how the actual data is rendering
