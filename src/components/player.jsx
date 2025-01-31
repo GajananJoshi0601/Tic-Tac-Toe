@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Player({initialName, symbol}){
-    const [playerName, setPlayerName]= useState(initialName);
+const [playerName, setPlayerName]= useState(initialName);
 // This statement is used to store the names that we will edit on each reload
  const [isEditing, setIsEditing] = useState(false);
 
@@ -9,8 +9,7 @@ export default function Player({initialName, symbol}){
     setIsEditing(!isEditing);  //true to false and vice versa
 }
 
-function handleChange(event){
-    console.log(event);
+function handleChange(event){ 
     setPlayerName(event.target.value);
 }
 
