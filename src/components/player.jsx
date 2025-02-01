@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Player({initialName, symbol}){
+export default function Player({initialName, symbol, isActive}){
 const [playerName, setPlayerName]= useState(initialName);
 // This statement is used to store the names that we will edit on each reload
  const [isEditing, setIsEditing] = useState(false);
@@ -23,7 +23,7 @@ let EditablePlayerName = <span className="player-name">{playerName}</span>
     }
 
     return(
-        <li>
+        <li className={isActive ? 'active' : undefined}>
             <span className="player">
               {EditablePlayerName}
               <span className="player-symbol">{symbol}</span>
