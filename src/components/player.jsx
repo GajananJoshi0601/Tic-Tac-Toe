@@ -1,12 +1,16 @@
 import { useState } from "react";
 
-export default function Player({initialName, symbol, isActive}){
+export default function Player({initialName, symbol, isActive, onChangeName}){
 const [playerName, setPlayerName]= useState(initialName);
 // This statement is used to store the names that we will edit on each reload
  const [isEditing, setIsEditing] = useState(false);
 
  function handleEditClick(){
     setIsEditing(!isEditing);  //true to false and vice versa
+    
+    if(isEditing){
+        onChangeName(symbol, playerName);
+    }
 }
 
 function handleChange(event){ 
