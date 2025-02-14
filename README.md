@@ -44,8 +44,8 @@
             </ul>
          <h2>Screenshots</h2>
             <p>Below are some screenshots of the game in action:</p>
-                <img src="screenshot1.png" alt="Screenshot 1" width="600">
-                <img src="screenshot2.png" alt="Screenshot 2" width="600">
+                <img src="/SS/ss-1.jpg" alt="Screenshot 1" width="600">
+                <img src="/SS/ss-2.jpg" alt="Screenshot 2" width="600">
             <h2>Contributing</h2>
             <p>
                 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
