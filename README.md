@@ -65,7 +65,7 @@
                 If you have any questions or suggestions, feel free to reach out to me:
             </p>
             <ul>
-                <li>Email: <a href="mailto:gajanajoshi0601@gmail.com">your-email@example.com</a></li>
+                <li>Email: <a href="mailto:gajanajoshi0601@gmail.com">gajananjoshi0601@gmail.com</a></li>
                 <li>GitHub: <a href="https://github.com/GajananJoshi0601
 ">Gajanan Joshi</a></li>
             </ul>
